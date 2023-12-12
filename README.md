@@ -11,3 +11,8 @@ react vite app
 AI-Assisted Development:
 ChatGPT has provided insights and assistance during the development process.
 
+API_URL: http://localhost:3000/
+UI_URL:  http://localhost:5173/
+
+note: This project is not completed yet, the url shortnering feature is under development
+
