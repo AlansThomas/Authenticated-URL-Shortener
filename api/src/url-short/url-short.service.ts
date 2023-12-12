@@ -2,14 +2,25 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Url } from '../schemas/url.schema';
-import { nanoid } from 'nanoid';
 
 @Injectable()
 export class UrlShortService {
   constructor(@InjectModel(Url.name) private urlModel: Model<Url>) {}
 
+  // Function to generate a random alphanumeric string
+  generateRandomString(length: number): string {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * characters.length);
+      result += characters.charAt(randomIndex);
+    }
+    return result;
+  }
+
   async shortenUrl(originalUrl: string): Promise<string> {
-    const shortenedUrl = nanoid(6);
+    // Generate a random alphanumeric string of length 6
+    const shortenedUrl = this.generateRandomString(6);
 
     // Create a new URL document
     const newUrl = new this.urlModel({
