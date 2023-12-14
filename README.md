@@ -9,23 +9,13 @@ This project is a Nest.js application that focuses on secure user registration, 
 - **Backend:**
   - Nest.js
   - Node.js
-  - npm
   - MongoDB Atlas
 
 - **Frontend:**
-  - React
-  - Vite
+  - React Js
 
 - **AI-Assisted Development:**
   - ChatGPT provided insights and assistance during the development process.
-
-## Software Specification
-
-- Node.js
-- Nest 
-- npm
-- MongoDB Atlas
-- React Vite App
 
 ## Application Details
 
@@ -44,7 +34,7 @@ This project is a work in progress, and the URL shortening feature is currently 
 
 To get started with the project, follow these steps:
 
-1. Clone the repository: `git clone <repository-url>`
+1. Clone the repository: `git clone https://github.com/AlansThomas/Authenticated-URL-Shortener.git`
 2. Install dependencies: `npm install` (for both frontend and backend)
 3. Configure the MongoDB Atlas connection settings
 4. Run the application: `npm start`
